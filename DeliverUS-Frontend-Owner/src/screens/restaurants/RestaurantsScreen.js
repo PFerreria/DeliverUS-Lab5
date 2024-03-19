@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, View, FlatList, Pressable, ImageCard } from 'react-native'
-import { TextRegular, TextSemiBold } from '../../components/TextRegular'
+import { StyleSheet, View, FlatList, Pressable } from 'react-native'
+import TextRegular from '../../components/TextRegular'
+import TextSemiBold from '../../components/TextSemibold'
+import ImageCard from '../../components/ImageCard'
 import { getAll } from '../../api/RestaurantEndpoints'
 import * as GlobalStyles from '../../styles/GlobalStyles'
 

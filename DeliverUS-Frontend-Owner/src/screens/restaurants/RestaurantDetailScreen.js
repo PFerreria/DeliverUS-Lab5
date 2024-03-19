@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, FlatList, Pressable, ImageBackground, Image } from 'react-native'
 import { getDetail } from '../../api/RestaurantEndpoints'
-import { TextRegular, TextSemiBold } from '../../components/TextRegular'
+import TextRegular from '../../components/TextRegular'
+import TextSemiBold from '../../components/TextSemibold'
 
 import * as GlobalStyles from '../../styles/GlobalStyles'
 
@@ -44,7 +45,7 @@ export default function RestaurantDetailScreen ({ route }) {
         <TextRegular style={styles.text}>{restaurant.description}</TextRegular>
         <TextRegular style={styles.text}>shippingCosts: {restaurant.shippingCosts}</TextRegular>
         <FlatList
-          ListHeaderComponent={renderHeader()}
+          ListHeaderComponent={renderHeader}
           style={styles.container}
           data={restaurant.products}
           renderItem={renderProduct}
